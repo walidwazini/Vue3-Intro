@@ -5,19 +5,22 @@
     </header>
     <ul>
       <friend-contact
-      name="Matt Murdock"
+        name="Matt Murdock"
         phone-number="0126374411"
         email-address="matt@defenders.com"
+        is-favourite='1'
       ></friend-contact>
       <friend-contact
         name="Walid"
         phone-number="0166378414"
         email-address="walid@localhost.com"
+        is-favourite='0'
       ></friend-contact>
       <friend-contact
         name="Jessica Jones"
         phone-number="0987 65431"
         email-address="jessjones@localhost.com"
+        is-favourite='0'
       ></friend-contact>
     </ul>
   </section>
