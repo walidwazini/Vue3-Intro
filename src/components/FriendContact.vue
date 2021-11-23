@@ -41,12 +41,12 @@ export default {
   data() {
     return {
       detailsAreVisible: false,
-      friend: {
-        id: "manuel",
-        name: "Manuel Lorenz",
-        phone: "0123456789",
-        email: "manuel@localhost.com",
-      },
+    //   friend: {
+    //     id: "manuel",
+    //     name: "Manuel Lorenz",
+    //     phone: "0123456789",
+    //     email: "manuel@localhost.com",
+    //   },
       friendIsFavourite: this.isFavourite,
     };
   },
@@ -55,11 +55,7 @@ export default {
       this.detailsAreVisible = !this.detailsAreVisible;
     },
     toggleFavourite() {
-      if (this.friendIsFavourite === "1") {
-        this.friendIsFavourite = "0";
-      } else {
-        this.friendIsFavourite = "1";
-      }
+        this.friendIsFavourite = !this.friendIsFavourite
     },
   },
 };
