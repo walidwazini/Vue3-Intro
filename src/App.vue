@@ -7,10 +7,12 @@
       <friend-contact
         v-for="friend in friends"
         :key="friend.id"
+        :id="friend.id"
         :name="friend.name"
         :phone-number="friend.phone"
         :email-address="friend.email"
-        :is-favourite="true"
+        :is-favourite="friend.isFavourite"
+        @toggle-favourite="toggleFavouriteStatus"
       ></friend-contact>
     </ul>
   </section>
@@ -26,21 +28,30 @@ export default {
           name: "Manuel Lorenz",
           phone: "0123456789",
           email: "manuel@localhost.com",
+          isFavourite: true,
         },
         {
           id: "altair",
           name: "Altair",
           phone: "0123456789",
           email: "altair@localhost.com",
+          isFavourite: true,
         },
         {
           id: "luna",
           name: "Lunafreya",
           phone: "0123456789",
           email: "lunafreya@localhost.com",
+          isFavourite: false,
         },
       ],
     };
+  },
+  methods: {
+    toggleFavouriteStatus(friendId) {
+      const indentifiedFriend = this.friends.find(friend => friend.id === friendId)
+      indentifiedFriend.isFavourite = !indentifiedFriend.isFavourite
+    },
   },
 };
 </script>
@@ -61,7 +72,7 @@ header {
   margin: 3rem auto;
   border-radius: 10px;
   padding: 1rem;
-  background-color: #58004d;
+  background-color: #0b18ca;
   color: white;
   text-align: center;
   width: 90%;
