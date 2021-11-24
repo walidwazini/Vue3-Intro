@@ -42,6 +42,7 @@ export default {
       // }
     },
   },
+  emits: ['toggle-favourite',],
   data() {
     return {
       detailsAreVisible: false,
